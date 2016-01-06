@@ -4,6 +4,8 @@
 
 $(function() {
 
+  //var Parse = require('parse');
+    
   Parse.$ = jQuery;
 
   // Initialize Parse with your Parse application javascript keys
@@ -12,14 +14,14 @@ $(function() {
   // Todo Model
   // ----------
 
-  var Parse = require('parse');
+  
 
-  var TestObject = Parse.Object.extend("TestObject");
-  var testObject = new TestObject();
-  testObject.save({foo: "bar"}).then(function(object) {
-    alert("yay! it worked");
-  });
-    
+//  var TestObject = Parse.Object.extend("TestObject");
+//  var testObject = new TestObject();
+//  testObject.save({foo: "bar"}).then(function(object) {
+//    alert("yay! it worked");
+//  });
+//    
   // Our basic Todo model has `content`, `order`, and `done` attributes.
   var Todo = Parse.Object.extend("Todo", {
     // Default attributes for the todo.
