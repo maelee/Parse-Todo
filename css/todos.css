@@ -19,7 +19,7 @@ button {
 }
 
 body {
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 14px 'Nunito', Roboto, Arial, sans-serif;
     line-height: 1.4em;
     background: #eeeeee url('../images/bg.png');
     color: #4d4d4d;

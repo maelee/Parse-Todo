@@ -7,12 +7,19 @@ $(function() {
   Parse.$ = jQuery;
 
   // Initialize Parse with your Parse application javascript keys
-  Parse.initialize("your-application-id",
-                   "your-javascript-key");
+  Parse.initialize("TPjMxMFsL1fzO8K7dyPo2FXVPfKnADjMRd2mnFqN", "0h3l3ELz7FSZ4uwVnOUuCl0ZBXPTYgxGksnmJ3C1");
 
   // Todo Model
   // ----------
 
+  var Parse = require('parse');
+
+  var TestObject = Parse.Object.extend("TestObject");
+  var testObject = new TestObject();
+  testObject.save({foo: "bar"}).then(function(object) {
+    alert("yay! it worked");
+  });
+    
   // Our basic Todo model has `content`, `order`, and `done` attributes.
   var Todo = Parse.Object.extend("Todo", {
     // Default attributes for the todo.
@@ -290,6 +297,7 @@ $(function() {
       var done = this.allCheckbox.checked;
       this.todos.each(function (todo) { todo.save({'done': done}); });
     }
+      
   });
 
   var LogInView = Parse.View.extend({
